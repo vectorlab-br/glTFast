@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - (Documentation) XML documentation comments on many types
 - (Documentation) Initial setup for DocFX generator
 ### Changed
+- Converted a lot of unintentionally public classes, types and properties to internal ones
 - (Documentation) Split up monolithic docs into multiple markdown files
 - (Documentation) Changelog links to code are now `xref` (for DocFX)
 ### Fixed

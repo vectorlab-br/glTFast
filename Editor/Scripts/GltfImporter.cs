@@ -32,7 +32,7 @@ using Object = UnityEngine.Object;
 namespace GLTFast.Editor {
 
     [ScriptedImporter(1,new [] {"gltf","glb"})] 
-    public class GltfImporter : ScriptedImporter {
+    class GltfImporter : ScriptedImporter {
 
         [SerializeField]
         EditorImportSettings editorImportSettings;

@@ -28,7 +28,7 @@ namespace GLTFast.Schema{
         /// </summary>
         public float strength = 1.0f;
         
-        public override void GltfSerialize(JsonWriter writer) {
+        internal override void GltfSerialize(JsonWriter writer) {
             writer.AddObject();
             GltfSerializeTextureInfo(writer);
             writer.Close();
