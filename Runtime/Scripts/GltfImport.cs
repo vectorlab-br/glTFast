@@ -1808,6 +1808,8 @@ namespace GLTFast {
                 {
                     GameObject go = ((GameObjectInstantiator)instantiator).GetGameobject(nodeIndex);
                     ExtrasFound?.Invoke(go, node.extras);
+                    Debug.Log("Extras content: ");
+                    Debug.Log(node.extras);
                 }
                 ///////////////////////////////////////////////////////////////
                 /// Changed by FCN from chrisssssy
