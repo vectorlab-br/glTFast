@@ -73,12 +73,6 @@ namespace GLTFast.Schema {
         ///////////////////////////////////////////////////////////////
         public Extras extras;
 
-        [System.Serializable]
-        public class Extras
-        {
-            public string data;
-        }
-
         public NodeExtensions extensions;
         
         public void GltfSerialize(JsonWriter writer) {
@@ -138,4 +132,15 @@ namespace GLTFast.Schema {
             }
         }
     }
+
+
+    ///////////////////////////////////////////////////////////////
+    /// Changed by FCN from chrisssssy
+    ///////////////////////////////////////////////////////////////
+    [System.Serializable]
+    public class Extras
+    {
+        public string data;
+    }
+
 }

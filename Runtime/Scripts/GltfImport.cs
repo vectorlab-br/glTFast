@@ -35,6 +35,10 @@ using GLTFast.Jobs;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using Debug = UnityEngine.Debug;
+
+// By FCN
+//using GLTFast.Schema;
+
 #if MESHOPT
 using Meshoptimizer;
 #endif
