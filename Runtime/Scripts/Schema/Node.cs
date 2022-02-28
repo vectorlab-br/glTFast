@@ -18,6 +18,10 @@ namespace GLTFast.Schema {
     [System.Serializable]
     public class Node : RootChild {
 
+        // Edit test
+        // From VS
+        // By FCN
+
         /// <summary>
         /// The indices of this node's children.
         /// </summary>
