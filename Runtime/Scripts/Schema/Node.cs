@@ -140,7 +140,7 @@ namespace GLTFast.Schema {
     [System.Serializable]
     public class Extras
     {
-        public string data;
+        public string PACE_DATA;
     }
 
 }
