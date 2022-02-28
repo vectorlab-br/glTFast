@@ -1810,6 +1810,7 @@ namespace GLTFast {
                     ExtrasFound?.Invoke(go, node.extras);
                     Debug.Log("Extras content: ");
                     Debug.Log(node.extras);
+                    Debug.Log(node.extras.data);
                 }
                 ///////////////////////////////////////////////////////////////
                 /// Changed by FCN from chrisssssy
