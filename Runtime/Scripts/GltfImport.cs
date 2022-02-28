@@ -56,6 +56,11 @@ namespace GLTFast {
     /// </summary>
     public class GltfImport : IGltfReadable, IGltfBuffers {
 
+        ///////////////////////////////////////////////////////////////
+        /// Changed by FCN from chrisssssy
+        ///////////////////////////////////////////////////////////////
+        public static event Action<GameObject, Extras> ExtrasFound;
+
         /// <summary>
         /// JSON parse speed in bytes per second
         /// Measurements based on a MacBook Pro Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
@@ -1790,7 +1795,20 @@ namespace GLTFast {
                         primitiveCount++;
                     }
                 }
-                
+
+
+                ///////////////////////////////////////////////////////////////
+                /// Changed by FCN from chrisssssy
+                ///////////////////////////////////////////////////////////////
+                if (node.extras != null)
+                {
+                    GameObject go = ((GameObjectInstantiator)instantiator).GetGameobject(nodeIndex);
+                    ExtrasFound?.Invoke(go, node.extras);
+                }
+                ///////////////////////////////////////////////////////////////
+                /// Changed by FCN from chrisssssy
+                ///////////////////////////////////////////////////////////////
+
                 instantiator.SetNodeName(nodeIndex,goName);
 
                 if (node.camera >= 0

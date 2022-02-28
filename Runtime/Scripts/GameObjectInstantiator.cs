@@ -93,6 +93,18 @@ namespace GLTFast {
             nodes[nodeIndex].transform.SetParent(nodes[parentIndex].transform,false);
         }
 
+
+        ///////////////////////////////////////////////////////////////
+        /// Changed by FCN from chrisssssy
+        ///////////////////////////////////////////////////////////////
+        public GameObject GetGameobject(uint nodeIndex)
+        {
+            return nodes[nodeIndex];
+        }
+        ///////////////////////////////////////////////////////////////
+        /// Changed by FCN from chrisssssy
+        ///////////////////////////////////////////////////////////////
+
         public virtual void SetNodeName(uint nodeIndex, string name) {
             nodes[nodeIndex].name = name ?? $"Node-{nodeIndex}";
         }

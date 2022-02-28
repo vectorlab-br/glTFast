@@ -68,6 +68,17 @@ namespace GLTFast.Schema {
         /// </summary>
         public int camera = -1;
 
+        ///////////////////////////////////////////////////////////////
+        /// Changed by FCN from chrisssssy
+        ///////////////////////////////////////////////////////////////
+        public Extras extras;
+
+        [System.Serializable]
+        public class Extras
+        {
+            public string data;
+        }
+
         public NodeExtensions extensions;
         
         public void GltfSerialize(JsonWriter writer) {
