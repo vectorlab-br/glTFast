@@ -1820,11 +1820,11 @@ namespace GLTFast {
                         if(pdata.props != null)
                         {
                             Debug.Log(pdata.props);
-                            Debug.Log("Props Len: {0}", pdata.props.Length);
+                            Debug.Log($"Props Len: {pdata.props.Length}");
                             for (int i = 0; i < pdata.props.Length; i++)
                             {
                                 var this_item = pdata.props[i];
-                                Debug.Log("{0}] : {1}", i, this_item);
+                                Debug.Log($"{i}] : {this_item}");
                                 //Debug.Log(this_item.value);
                             }
                         }
