@@ -38,6 +38,7 @@ using Debug = UnityEngine.Debug;
 
 // By FCN
 // using System.Text.Json;
+using SimpleJSON;
 
 #if MESHOPT
 using Meshoptimizer;
@@ -1812,14 +1813,11 @@ namespace GLTFast {
                     if (node.extras.PACE_DATA != null)
                     {
                         // Parse json
-                        Root Nodes_from_json;
-                        Nodes_from_json  = JsonParser.ParseJson(node.extras.PACE_DATA);
+                        JSONNODE local_node = JSON.Parse(node.extras.PACE_DATA);
 
-
-                        for (var localnodeIndex = 0; localnodeIndex < Nodes_from_json.nodes.Length; localnodeIndex++)
+                        foreach(JSONNODE record in local_node)
                         {
-                            var local_node = Nodes_from_json.nodes[localnodeIndex];
-                            Debug.Log(local_node);
+                            Debug.Log("loop");
                         }
 
                         // Debug.Log("Extras content: ");
