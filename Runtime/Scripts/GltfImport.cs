@@ -38,7 +38,7 @@ using Debug = UnityEngine.Debug;
 
 // By FCN
 // using System.Text.Json;
-// using SimpleJSON;
+using System.Linq;
 
 #if MESHOPT
 using Meshoptimizer;
@@ -1813,21 +1813,28 @@ namespace GLTFast {
                     if (node.extras.PACE_DATA != null)
                     {
                         string json = node.extras.PACE_DATA;
-                        Debug.Log(json); // "Json found: {0}", 
+                        Debug.Log($"JSon read: {json}"); // "Json found: {0}", 
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
+                        Debug.Log($"IDX: {pdata.IDX}");
 
                         if(pdata.props != null)
                         {
-                            Debug.Log(pdata.props);
+                            Debug.Log($"Props type: {pdata.props}");
                             Debug.Log($"Props Len: {pdata.props.Length}");
                             for (int i = 0; i < pdata.props.Length; i++)
                             {
-                                var this_item = pdata.props[i];
-                                Debug.Log($"{i}] : {this_item}");
+                                var obj = pdata.props[i];
+                                //Type type = obj.GetType();
+                                Debug.Log($"{i}] : {obj.GetValues()}");
+
+                                //foreach(var f in type.GetFields().Where(f => f.IsPublic))
+                                //{
+                                //    Debug.Log($"Nome>>> {f.Name}, Valor>>> {f.GetValue(obj)}");
+                                //}
 
                                 //PACEDataRecord npr = this_item;
-                                Debug.Log(this_item.GetValues());
+                                //Debug.Log(obj.GetValues());
                             }
                         }
                     }

@@ -147,16 +147,17 @@ namespace GLTFast.Schema {
 
         public string GetValues()
         {
-            return $"{this.key} : {this.value}";
+            return $"ID: {this.id}, Nome: {this.nome}";
         }
 
-        public string key;
-        public string value;
+        public int id;
+        public string nome;
     }
 
     [System.Serializable]
     public class PACEData
     {
+        public string IDX;
         public PACEDataRecord[] props;
     }
 
