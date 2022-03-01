@@ -144,6 +144,12 @@ namespace GLTFast.Schema {
     [System.Serializable]
     public class PACEDataRecord
     {
+
+        public string GetValues()
+        {
+            return $"{this.key} : {this.value}";
+        }
+
         public string key;
         public string value;
     }

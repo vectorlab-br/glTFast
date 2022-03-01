@@ -1826,15 +1826,8 @@ namespace GLTFast {
                                 var this_item = pdata.props[i];
                                 Debug.Log($"{i}] : {this_item}");
 
-                                if(this_item.key != null)
-                                {
-                                    Debug.Log($"Item Value: {this_item.key}");
-                                }
-
-                                if (this_item.value != null)
-                                {
-                                    Debug.Log($"Item Value: {this_item.value}");
-                                }
+                                //PACEDataRecord npr = this_item;
+                                Debug.Log(this_item.GetValues());
                             }
                         }
                     }
