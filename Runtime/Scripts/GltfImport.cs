@@ -1821,9 +1821,9 @@ namespace GLTFast {
 
                         //Debug.Log("List size: {0}", pdata.props.Count);
 
-                        foreach (PACEDataRecord record in pdata.props)
+                        foreach (var rec in pdata.props)
                         {
-                            Debug.Log("Key: " + record.key + " value: " + record.value);
+                            Debug.Log("Key: " + rec.key + " value: " + rec.value);
                         }
 
 
