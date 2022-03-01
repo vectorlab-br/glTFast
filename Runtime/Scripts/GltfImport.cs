@@ -1813,7 +1813,7 @@ namespace GLTFast {
                     {
                         // Parse json
                         Root Nodes_from_json;
-                        Nodes_from_json  = JsonParser.ParseJson(json);
+                        Nodes_from_json  = JsonParser.ParseJson(node.extras.PACE_DATA);
 
 
                         for (var nodeIndex = 0; nodeIndex < Nodes_from_json.nodes.Length; nodeIndex++)
