@@ -1816,7 +1816,7 @@ namespace GLTFast {
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
 
-                        foreach(PACEDataRecord record in pdata)
+                        foreach(PACEDataRecord record in pdata.props)
                         {
                             Debug.Log("Key: " + record.key + " value: " + record.value);
                         }
