@@ -13,6 +13,8 @@
 // limitations under the License.
 //
 
+using System.Collections.Generic;
+
 namespace GLTFast.Schema {
 
     [System.Serializable]
