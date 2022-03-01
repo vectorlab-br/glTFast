@@ -1822,7 +1822,7 @@ namespace GLTFast {
                             for(int i = 0; i < pdata.props.Length; i++)
                             {
                                 var this_item = pdata.props[i];
-                                // Debug.Log(this_item);
+                                Debug.Log(this_item);
                             }
                         }
                     }
