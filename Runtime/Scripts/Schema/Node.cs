@@ -140,11 +140,16 @@ namespace GLTFast.Schema {
     }
 
     [System.Serializable]
+    public class PACEDataRecord
+    {
+        public string key;
+        public string value;
+    }
+
+    [System.Serializable]
     public class PACEData
     {
-        public string DATA1;
-        public string DATA2;
-        public string DATA3;
+        public List<PACEDataRecord> props;
     }
 
 }
