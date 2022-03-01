@@ -1816,12 +1816,12 @@ namespace GLTFast {
                         Debug.Log(json); // "Json found: {0}", 
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
-                        Debug.Log(pdata);
-                        Debug.Log(pdata.props);
-                        Debug.Log(pdata.props.Count);
+                        //Debug.Log(pdata);
+                        //Debug.Log(pdata.props);
+                        //Debug.Log(pdata.props.Count);
 
-                        var it1 = pdata.props[0];
-                        Debug.Log(it1);
+                        // var it1 = pdata.props[0];
+                        // Debug.Log(it1.key);
 
                         //Debug.Log("List size: {0}", pdata.props.Count);
 
