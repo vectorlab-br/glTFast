@@ -1813,9 +1813,9 @@ namespace GLTFast {
                     if (node.extras.PACE_DATA != null)
                     {
                         // Parse json
-                        JSONNODE local_node = JSON.Parse(node.extras.PACE_DATA);
+                        JSONNode local_node = JSON.Parse(node.extras.PACE_DATA);
 
-                        foreach(JSONNODE record in local_node)
+                        foreach(JSONNode record in local_node)
                         {
                             Debug.Log("loop");
                         }
