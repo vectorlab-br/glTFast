@@ -1813,8 +1813,11 @@ namespace GLTFast {
                     if (node.extras.PACE_DATA != null)
                     {
                         string json = node.extras.PACE_DATA;
+                        Debug.Log("Json found: {0}", json);
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
+
+                        Debug.Log("List size: {0}", pdata.props.Count);
 
                         foreach(PACEDataRecord record in pdata.props)
                         {
