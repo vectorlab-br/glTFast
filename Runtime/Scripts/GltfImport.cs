@@ -1817,6 +1817,7 @@ namespace GLTFast {
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
                         Debug.Log(pdata);
+                        Debug.Log(pdata.props);
 
                         //Debug.Log("List size: {0}", pdata.props.Count);
 
