@@ -1820,7 +1820,7 @@ namespace GLTFast {
                         Debug.Log(pdata.props);
                         Debug.Log(pdata.props.Count);
 
-                        var it1 = pdata.props.item[0];
+                        var it1 = pdata.props[0];
                         Debug.Log(it1);
 
                         //Debug.Log("List size: {0}", pdata.props.Count);
