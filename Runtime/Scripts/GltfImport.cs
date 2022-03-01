@@ -1816,6 +1816,10 @@ namespace GLTFast {
                         // Parse json
                         PACEData local_node = JsonUtility.FromJson<PACEData>(json);
 
+                        Debug.Log(local_node.DATA1);
+                        Debug.Log(local_node.DATA2);
+                        Debug.Log(local_node.DATA3);
+
 
                         // Debug.Log("Extras content: ");
                         // Debug.Log(node.extras);
