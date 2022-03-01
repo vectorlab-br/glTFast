@@ -1819,10 +1819,12 @@ namespace GLTFast {
 
                         if(pdata.props != null)
                         {
-                            for(int i = 0; i < pdata.props.Length; i++)
+                            Debug.Log(pdata.props);
+                            for (int i = 0; i < pdata.props.Length; i++)
                             {
                                 var this_item = pdata.props[i];
-                                Debug.Log(this_item);
+                                Debug.Log(this_item.key);
+                                Debug.Log(this_item.value);
                             }
                         }
                     }
