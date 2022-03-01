@@ -1816,24 +1816,15 @@ namespace GLTFast {
                         Debug.Log(json); // "Json found: {0}", 
                         // Parse json
                         PACEData pdata = JsonUtility.FromJson<PACEData>(json);
-                        //Debug.Log(pdata);
-                        //Debug.Log(pdata.props);
-                        //Debug.Log(pdata.props.Count);
 
-                        // var it1 = pdata.props[0];
-                        // Debug.Log(it1.key);
-
-                        //Debug.Log("List size: {0}", pdata.props.Count);
-
-                        foreach (var rec in pdata.props)
+                        if(pdata.props != null)
                         {
-                            Debug.Log("Key: " + rec.key + " value: " + rec.value);
+                            for(int i = 0; i < pdata.props.Length; i++)
+                            {
+                                var this_item = pdata.props[i];
+                                // Debug.Log(this_item);
+                            }
                         }
-
-
-                        // Debug.Log("Extras content: ");
-                        // Debug.Log(node.extras);
-                        // Debug.Log(node.extras.PACE_DATA);
                     }
                 }
                 ///////////////////////////////////////////////////////////////

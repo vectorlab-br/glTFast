@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-using System.Collections.Generic;
+// using System.Collections.Generic;
 
 namespace GLTFast.Schema {
 
@@ -151,7 +151,7 @@ namespace GLTFast.Schema {
     [System.Serializable]
     public class PACEData
     {
-        public List<PACEDataRecord> props;
+        public PACEDataRecord[] props;
     }
 
 }
