@@ -37,7 +37,7 @@ using Unity.Mathematics;
 using Debug = UnityEngine.Debug;
 
 // By FCN
-//using GLTFast.Schema;
+// using System.Text.Json;
 
 #if MESHOPT
 using Meshoptimizer;
@@ -1808,9 +1808,24 @@ namespace GLTFast {
                 {
                     GameObject go = ((GameObjectInstantiator)instantiator).GetGameobject(nodeIndex);
                     ExtrasFound?.Invoke(go, node.extras);
-                    Debug.Log("Extras content: ");
-                    // Debug.Log(node.extras);
-                    Debug.Log(node.extras.PACE_DATA);
+
+                    if (node.extras.PACE_DATA != null)
+                    {
+                        // Parse json
+                        Root Nodes_from_json;
+                        Nodes_from_json  = JsonParser.ParseJson(json);
+
+
+                        for (var nodeIndex = 0; nodeIndex < Nodes_from_json.nodes.Length; nodeIndex++)
+                        {
+                            var local_node = Nodes_from_json.nodes[nodeIndex];
+                            Debug.Log(local_node);
+                        }
+
+                        // Debug.Log("Extras content: ");
+                        // Debug.Log(node.extras);
+                        // Debug.Log(node.extras.PACE_DATA);
+                    }
                 }
                 ///////////////////////////////////////////////////////////////
                 /// Changed by FCN from chrisssssy
