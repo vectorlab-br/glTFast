@@ -1812,13 +1812,10 @@ namespace GLTFast {
 
                     if (node.extras.PACE_DATA != null)
                     {
+                        string json = node.extras.PACE_DATA;
                         // Parse json
-                        JSONNode local_node = JSON.Parse(node.extras.PACE_DATA);
+                        PACEData local_node = JsonUtility.FromJson<PACEData>(json);
 
-                        foreach(JSONNode record in local_node)
-                        {
-                            Debug.Log("loop");
-                        }
 
                         // Debug.Log("Extras content: ");
                         // Debug.Log(node.extras);

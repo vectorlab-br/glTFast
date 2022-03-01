@@ -18,10 +18,6 @@ namespace GLTFast.Schema {
     [System.Serializable]
     public class Node : RootChild {
 
-        // Edit test
-        // From VS
-        // By FCN
-
         /// <summary>
         /// The indices of this node's children.
         /// </summary>
@@ -141,6 +137,14 @@ namespace GLTFast.Schema {
     public class Extras
     {
         public string PACE_DATA;
+    }
+
+    [System.Serializable]
+    public class PACEData
+    {
+        public string DATA1;
+        public string DATA2;
+        public string DATA3;
     }
 
 }
