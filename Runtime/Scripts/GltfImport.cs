@@ -1816,9 +1816,9 @@ namespace GLTFast {
                         Nodes_from_json  = JsonParser.ParseJson(node.extras.PACE_DATA);
 
 
-                        for (var nodeIndex = 0; nodeIndex < Nodes_from_json.nodes.Length; nodeIndex++)
+                        for (var localnodeIndex = 0; localnodeIndex < Nodes_from_json.nodes.Length; localnodeIndex++)
                         {
-                            var local_node = Nodes_from_json.nodes[nodeIndex];
+                            var local_node = Nodes_from_json.nodes[localnodeIndex];
                             Debug.Log(local_node);
                         }
 
